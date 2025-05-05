@@ -42,7 +42,7 @@ export const login = async (req: Request, res: Response) => {
         // Generate Token
         const token = generateToken(deliveryPerson._id.toString(), deliveryPerson.role);
 
-        res.status(200).json({ token, deliveryPerson });
+        res.status(201).json({ token, deliveryPerson });
     } catch (error) {
         res.status(500).json({ error });
     }

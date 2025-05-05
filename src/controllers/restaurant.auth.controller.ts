@@ -42,7 +42,7 @@ export const login = async (req: Request, res: Response) => {
         // Generate Token
         const token = generateToken(restaurant._id.toString(), restaurant.role);
 
-        res.status(200).json({ token, restaurant });
+        res.status(201).json({ token, restaurant });
     } catch (error) {
         res.status(500).json({ error});
     }
